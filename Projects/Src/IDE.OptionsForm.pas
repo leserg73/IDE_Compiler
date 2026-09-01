@@ -119,6 +119,8 @@ begin
   LanguageComboBox.Items.Add(#$010C'e'#$0161'tina');
   LanguageComboBox.Items.Add('Nederlands');
   LanguageComboBox.Items.Add('Deutsch');
+  LanguageComboBox.Items.Add(#$0420#$0443#$0441#$0441#$043A#$0438#$0439);
+  LanguageComboBox.Items.Add(#$0423#$043A#$0440#$0430#$0457#$043D#$0441#$044C#$043A#$0430);
   LanguageComboBox.Items.Add(#$65E5#$672C#$8A9E);
 end;
 

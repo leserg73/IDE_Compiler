@@ -922,6 +922,8 @@ constructor TMainForm.Create(AOwner: TComponent);
           LANG_CZECH: MessageLanguage := ilCzech;
           LANG_DUTCH: MessageLanguage := ilDutch;
           LANG_GERMAN: MessageLanguage := ilGerman;
+          LANG_RUSSIAN: MessageLanguage := ilRussian;
+          LANG_UKRAINIAN: MessageLanguage := ilUkrainian;
           LANG_JAPANESE: MessageLanguage := ilJapanese;
         end;
         if MessageLanguage <> ilEnglish then

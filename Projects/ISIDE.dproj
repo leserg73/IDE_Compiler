@@ -128,6 +128,8 @@
         <DCCReference Include="Src\IDE.LocalizeFunc.Czech.pas"/>
         <DCCReference Include="Src\IDE.LocalizeFunc.Dutch.pas"/>
         <DCCReference Include="Src\IDE.LocalizeFunc.German.pas"/>
+        <DCCReference Include="Src\IDE.LocalizeFunc.Russian.pas"/>
+        <DCCReference Include="Src\IDE.LocalizeFunc.Ukrainian.pas"/>
         <DCCReference Include="Src\IDE.LocalizeFunc.Japanese.pas"/>
         <DCCReference Include="Src\Shared.CompilerInt.pas"/>
         <DCCReference Include="Src\Shared.CompilerInt.Struct.pas"/>

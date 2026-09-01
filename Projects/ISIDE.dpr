@@ -25,6 +25,8 @@ uses
   IDE.LocalizeFunc.Czech in 'Src\IDE.LocalizeFunc.Czech.pas',
   IDE.LocalizeFunc.Dutch in 'Src\IDE.LocalizeFunc.Dutch.pas',
   IDE.LocalizeFunc.German in 'Src\IDE.LocalizeFunc.German.pas',
+  IDE.LocalizeFunc.Russian in 'Src\IDE.LocalizeFunc.Russian.pas',
+  IDE.LocalizeFunc.Ukrainian in 'Src\IDE.LocalizeFunc.Ukrainian.pas',
   IDE.LocalizeFunc.Japanese in 'Src\IDE.LocalizeFunc.Japanese.pas',
   Shared.CompilerInt in 'Src\Shared.CompilerInt.pas',
   Shared.CompilerInt.Struct in 'Src\Shared.CompilerInt.Struct.pas',
