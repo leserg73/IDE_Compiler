@@ -1,4 +1,4 @@
-<img width="373" height="80" alt="IDE_Compiler" src="https://github.com/user-attachments/assets/b4665a90-ff7a-4756-a6ae-075c2d0adea8" />
+<img width="373" height="80" alt="IDE_Compiler" src="https://github.com/user-attachments/assets/cd54f782-3376-4afe-8ef4-8638b9417cae" />
 
 [![Latest Version](https://img.shields.io/github/release/leserg73/IDE_Compiler.svg)](https://github.com/leserg73/IDE_Compiler/releases/latest)
 [![Total Downloads](https://img.shields.io/github/downloads/leserg73/IDE_Compiler/total.svg)](https://github.com/leserg73/IDE_Compiler/releases)
@@ -14,7 +14,7 @@ ____
 > The translations cannot be edited, and additional languages are not being accepted.
 
 
-Странное заявление... При том, что для следующей версии языковая поддержка расширяется.
+Странное заявление... При этом для следующей версии языковая поддержка расширяется.
 На мое предложение с добавлением русского и украинского разработчик ответил категорическим отказом.
 
 Раз нет - сделаем сами.
