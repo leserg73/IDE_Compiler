@@ -1,4 +1,4 @@
-<img width="373" height="80" alt="IDE_Compiler" src="https://github.com/user-attachments/assets/cd54f782-3376-4afe-8ef4-8638b9417cae" />
+<img width="373" height="80" alt="CompilerIDE" src="https://github.com/user-attachments/assets/ae4530e1-6b6d-40b5-9565-a19fd2696e95" />
 
 [![Latest Version](https://img.shields.io/github/release/leserg73/IDE_Compiler.svg)](https://github.com/leserg73/IDE_Compiler/releases/latest)
 [![Total Downloads](https://img.shields.io/github/downloads/leserg73/IDE_Compiler/total.svg)](https://github.com/leserg73/IDE_Compiler/releases)
