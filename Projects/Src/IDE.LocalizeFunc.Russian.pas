@@ -15,7 +15,7 @@ uses
   IDE.LocalizeFunc;
 
 const
-  RussianIDETranslations: array [0..970] of TTranslationPair = (
+  RussianIDETranslations: array [0..967] of TTranslationPair = (
     (English: 'Command-line usage:'; Localized: 'Использование командной строки:'),
     (English: 'Examples:'; Localized: 'Примеры:'),
     (English: 'script file'; Localized: 'файл сценария'),
@@ -226,6 +226,7 @@ const
     (English: 'There was an error opening the file. Remove it from the list?'; Localized: 'При открытии файла произошла ошибка. Удалить его из списка?'),
     (English: 'The text in the %1 file has changed.%n%nDo you want to save the changes?'; Localized: 'Текст в файле "%1" был изменён.%n%nВы хотите сохранить изменения?'),
     (English: 'Please stop the compile process before performing this command.'; Localized: 'Остановите компиляцию перед выполнением этой команды.'),
+    (English: 'The %1 file has been modified outside of the source editor, but cannot be reloaded while the compile process is running.'; Localized: 'Файл "%1" был изменён в другом редакторе, но не может быть перезагружен во время выполнения компиляции.'),
     (English: 'A compile is already in progress.'; Localized: 'Процесс компиляции уже запущен.'),
     (English: 'The text in the %1 file has changed and must be saved before compiling.%n%nSave the changes and continue?'; Localized: 'Текст в файле "%1" был изменён и перед компиляцией должен быть сохранён.%n%nСохранить изменения и продолжить?'),
     (English: 'Would you like to save the script before compiling?%n%nIf you answer No, the compiled installation will be placed under your My Documents folder by default.'; Localized: 'Вы хотите сохранить сценарий перед началом компиляции?%n%nПри ответе "Нет" файл установки по умолчанию будет создан в папке "Мои документы".'),
@@ -241,6 +242,7 @@ const
     (English: 'The %1 file has been modified outside of the source editor. You might want to reload it.'; Localized: 'Файл "%1" был изменён в другом редакторе. Возможно, вам следует перезагрузить его.'),
     (English: 'The %1 file has been modified outside of the source editor.%n%nDo you want to reload the file?'; Localized: 'Файл "%1" был изменён в другом редакторе.%n%nВы хотите перезагрузить этот файл?'),
     (English: 'The %1 file has been modified outside of the source editor. Changes have also been made in the source editor.%n%nDo you want to reload the file and lose the changes made in the source editor?'; Localized: 'Файл "%1" был изменён в другом редакторе, но изменения также были сделаны и в текущем редакторе.%n%nСледует ли перезагрузить этот файл с потерей всех изменений, сделанных в текущем редакторе?'),
+    (English: 'The %1 file has been modified outside of the source editor and is about to be reloaded, together with its %3 files.%n%nThe text in the %3 file %2 has changed.%n%nDo you want to save the changes?'; Localized: 'Файл "%1" был изменён в другом редакторе и будет перезагружен вместе с файлами %3.%n%nТекст в файле %3 (%2) изменился.%n%nХотите сохранить изменения?'),
     (English: 'File not opened.'; Localized: 'Файл не открыт.'),
     (English: 'Go to Line'; Localized: 'Переход к строке'),
     (English: 'Line number:'; Localized: 'Введите номер строки:'),
@@ -265,7 +267,9 @@ const
     (English: 'Unable to get %1 exit code (%2 failed)'; Localized: 'Невозможно получить код выхода %1 (ошибка %2)'),
     (English: '%1 is still running; can''t get exit code'; Localized: '%1 все еще выполняется; невозможно получить код выхода'),
     (English: 'Please stop the running %1 process before performing this command.'; Localized: 'Перед выполнением этой команды остановите запущенный процесс %1.'),
+    (English: 'The %2 file has been modified outside of the source editor, but cannot be reloaded while the %1 process is running.'; Localized: 'Файл "%2" был изменён в другом редакторе, но не может быть перезагружен, пока выполняется процесс %1.'),
     (English: 'This command will detach the debugger from the running %1 process. Continue?'; Localized: 'Эта команда отсоединит отладчик от запущенного процесса %1. Продолжить?'),
+    (English: 'The %2 file has been modified outside of the source editor and is about to be reloaded.%n%nThis will detach the debugger from the running %1 process. Continue?'; Localized: 'Файл "%2" был изменён в другом редакторе и сейчас будет перезагружен.%n%nЭто приведёт к отключению отладчика от запущенного процесса %1. Продолжить?'),
     (English: 'The changes you made will not take effect until you re-compile.%n%nContinue running anyway?'; Localized: 'Внесенные изменения вступят в силу только после перекомпиляции.%n%nПродолжить выполнение?'),
     (English: 'A pause is already pending.'; Localized: 'Процесс выполнения уже приостановлен.'),
     (English: 'No code was generated for the current line.'; Localized: 'Для текущей строки код не создан.'),
@@ -703,7 +707,6 @@ const
     (English: 'Identifier expected'; Localized: 'Ожидался идентификатор'),
     (English: 'Invalid binary value'; Localized: 'Неверное двоичное значение'),
     (English: 'Invalid stream format'; Localized: 'Неверный формат потока'),
-    (English: '''%s'' is an invalid mask at (%d)'; Localized: '''%s'' – недопустимая маска в позиции (%d)'),
     (English: '''''%s'''' is not a valid component name'; Localized: '''''%s'''' – недопустимое имя компонента'),
     (English: 'Invalid property value'; Localized: 'Недопустимое значение свойства'),
     (English: 'Invalid property path'; Localized: 'Недопустимый путь свойства'),
@@ -744,12 +747,6 @@ const
     (English: 'Parameter %s cannot be nil'; Localized: 'Параметр %s не может быть nil'),
     (English: 'Parameter %s cannot be a negative value'; Localized: 'Параметр %s не может быть отрицательным'),
     (English: 'Invalid characters in path'; Localized: 'Недопустимые символы в пути'),
-    (English: 'Invalid characters in search pattern'; Localized: 'Недопустимые символы в шаблоне поиска'),
-    (English: 'Path is empty'; Localized: 'Путь пуст'),
-    (English: 'Search pattern is empty'; Localized: 'Шаблон поиска пуст'),
-    (English: 'The specified path is too long'; Localized: 'Указанный путь слишком длинный'),
-    (English: 'The specified path was not found'; Localized: 'Указанный путь не найден'),
-    (English: 'The path format is not supported'; Localized: 'Формат пути не поддерживается'),
     (English: 'No help viewer that supports filters'; Localized: 'Не найден просмотрщик справки, поддерживающий фильтры'),
     (English: 'String index out of range (%d).  Must be >= %d and <= %d'; Localized: 'Индекс строки вне диапазона (%d). Должен быть >= %d и <= %d'),
     (English: 'Invalid UTF32 character value.  Must be >= 0 and <= $10FFFF, excluding surrogate pair ranges'; Localized: 'Недопустимое значение символа UTF32. Должно быть >= 0 и <= $10FFFF, исключая диапазоны суррогатных пар'),

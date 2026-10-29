@@ -15,7 +15,7 @@ uses
   IDE.LocalizeFunc;
 
 const
-  UkrainianIDETranslations: array [0..970] of TTranslationPair = (
+  UkrainianIDETranslations: array [0..967] of TTranslationPair = (
     (English: 'Command-line usage:'; Localized: 'Використання командного рядка:'),
     (English: 'Examples:'; Localized: 'Приклади:'),
     (English: 'script file'; Localized: 'файл сценарію'),
@@ -226,6 +226,7 @@ const
     (English: 'There was an error opening the file. Remove it from the list?'; Localized: 'Під час відкриття файлу сталася помилка. Видалити його зі списку?'),
     (English: 'The text in the %1 file has changed.%n%nDo you want to save the changes?'; Localized: 'Текст у файлі "%1" було змінено.%n%nБажаєте зберегти ці зміни?'),
     (English: 'Please stop the compile process before performing this command.'; Localized: 'Будь ласка, зупиніть процес компіляції перед виконанням цієї команди.'),
+    (English: 'The %1 file has been modified outside of the source editor, but cannot be reloaded while the compile process is running.'; Localized: 'Файл "%1" було змінено поза межами цього редактора, але не може бути перезавантажений під час виконання компіляції.'),
     (English: 'A compile is already in progress.'; Localized: 'Процес компіляції вже запущено.'),
     (English: 'The text in the %1 file has changed and must be saved before compiling.%n%nSave the changes and continue?'; Localized: 'Текст у файлі "%1" було змінено і його потрібно зберегти перед компіляцією.%n%nБажаєте зберегти ці зміни та продовжити?'),
     (English: 'Would you like to save the script before compiling?%n%nIf you answer No, the compiled installation will be placed under your My Documents folder by default.'; Localized: 'Бажаєте зберегти сценарій перед компіляцією?%n%nЯкщо ви відповісте "Ні", скомпільована інсталяція буде розміщена у вашій папці "Мої документи" за замовчуванням.'),
@@ -241,6 +242,7 @@ const
     (English: 'The %1 file has been modified outside of the source editor. You might want to reload it.'; Localized: 'Файл "%1" було змінено поза межами цього редактора. Можливо, його слід перезавантажити.'),
     (English: 'The %1 file has been modified outside of the source editor.%n%nDo you want to reload the file?'; Localized: 'Файл "%1" було змінено поза межами цього редактора.%n%nБажаєте перезавантажити цей файл?'),
     (English: 'The %1 file has been modified outside of the source editor. Changes have also been made in the source editor.%n%nDo you want to reload the file and lose the changes made in the source editor?'; Localized: 'Файл "%1" було змінено поза межами цього редактора. Зміни також було внесено в сучасному редакторі.%n%nЧи бажаєте ви перезавантажити файл і втратити зміни, внесені в сучасному редакторі?'),
+    (English: 'The %1 file has been modified outside of the source editor and is about to be reloaded, together with its %3 files.%n%nThe text in the %3 file %2 has changed.%n%nDo you want to save the changes?'; Localized: 'Файл "%1" було змінено поза межами цього редактора і буде перезавантажений разом з файлами %3.%n%nТекст у файлі %3 (%2) змінився.%n%nБажаєте зберегти ці зміни?'),
     (English: 'File not opened.'; Localized: 'Файл не відкрито.'),
     (English: 'Go to Line'; Localized: 'Перейти до рядка'),
     (English: 'Line number:'; Localized: 'Введіть номер рядка:'),
@@ -265,7 +267,9 @@ const
     (English: 'Unable to get %1 exit code (%2 failed)'; Localized: 'Не вдалося отримати код виходу %1 (помилка %2)'),
     (English: '%1 is still running; can''t get exit code'; Localized: '%1 все ще працює; не вдається отримати код виходу'),
     (English: 'Please stop the running %1 process before performing this command.'; Localized: 'Будь ласка, зупиніть процес %1 перед виконанням цієї команди.'),
+    (English: 'The %2 file has been modified outside of the source editor, but cannot be reloaded while the %1 process is running.'; Localized: 'Файл "%2" було змінено поза межами цього редактора, але не може бути перезавантажений, поки виконується процес %1.'),
     (English: 'This command will detach the debugger from the running %1 process. Continue?'; Localized: 'Ця команда від’єднає відладчик від запущеного процесу %1. Продовжити?'),
+    (English: 'The %2 file has been modified outside of the source editor and is about to be reloaded.%n%nThis will detach the debugger from the running %1 process. Continue?'; Localized: 'Файл "%2" було змінено поза межами цього редактора  і зараз буде перезавантажений.%n%nЦе призведе до відключення налагоджувача від запущеного процесу %1. Продовжити?'),
     (English: 'The changes you made will not take effect until you re-compile.%n%nContinue running anyway?'; Localized: 'Внесені зміни набудуть чинності лише після повторної компіляції.%n%nПродовжити виконання?'),
     (English: 'A pause is already pending.'; Localized: 'Процес виконання вже призупинено.'),
     (English: 'No code was generated for the current line.'; Localized: 'Для поточного рядка код не було згенеровано.'),
@@ -703,7 +707,6 @@ const
     (English: 'Identifier expected'; Localized: 'Очікується ідентифікатор'),
     (English: 'Invalid binary value'; Localized: 'Недійсне бінарне значення'),
     (English: 'Invalid stream format'; Localized: 'Недійсний формат потоку'),
-    (English: '''%s'' is an invalid mask at (%d)'; Localized: '''%s'' – недійсна маска в позиції (%d)'),
     (English: '''''%s'''' is not a valid component name'; Localized: '''''%s'''' – недійсна назва компонента'),
     (English: 'Invalid property value'; Localized: 'Недійсне значення властивості'),
     (English: 'Invalid property path'; Localized: 'Недійсний шлях до властивості'),
@@ -744,12 +747,6 @@ const
     (English: 'Parameter %s cannot be nil'; Localized: 'Параметр %s не може бути nil'),
     (English: 'Parameter %s cannot be a negative value'; Localized: 'Параметр %s не може бути від’ємним значенням'),
     (English: 'Invalid characters in path'; Localized: 'Недійсні символи в шляху'),
-    (English: 'Invalid characters in search pattern'; Localized: 'Недійсні символи в шаблоні пошуку'),
-    (English: 'Path is empty'; Localized: 'Шлях порожній'),
-    (English: 'Search pattern is empty'; Localized: 'Шаблон пошуку порожній'),
-    (English: 'The specified path is too long'; Localized: 'Вказаний шлях занадто довгий'),
-    (English: 'The specified path was not found'; Localized: 'Вказаний шлях не знайдено'),
-    (English: 'The path format is not supported'; Localized: 'Формат шляху не підтримується'),
     (English: 'No help viewer that supports filters'; Localized: 'Немає переглядача довідки з підтримкою фільтрів'),
     (English: 'String index out of range (%d).  Must be >= %d and <= %d'; Localized: 'Індекс рядка поза діапазоном (%d). Має бути >= %d та <= %d'),
     (English: 'Invalid UTF32 character value.  Must be >= 0 and <= $10FFFF, excluding surrogate pair ranges'; Localized: 'Неприпустиме значення символу UTF32. Має бути >= 0 та <= $10FFFF, за винятком діапазонів сурогатних пар'),
